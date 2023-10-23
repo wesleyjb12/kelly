@@ -1,0 +1,171 @@
+/* */
+*{
+    font-family: "Oswald", sans-serif;
+    /*tamanho da caixa leva em consideracao o 
+    padding e border, menos margin */
+    box-sizing: border-box;
+
+}
+
+body {
+    /*viewport (tamanho do nosso dispositivo)*/
+    height: 100vh;
+    margin: 0px;
+    /*divide a tela em linhas e colunas */
+    display: grid;
+    /*definindo tamanho das linhas fr(fragmento)*/
+    grid-template-rows: 120px 1fr 60px;
+    /*definindo tamanho das linhas*/
+    grid-template-columns: 1fr;
+    /*define qual área cada div irá ocupar*/
+    grid-template-areas: 
+    "cabecalho"
+    "principal"
+    "rodape";
+
+}
+.cabecalho{
+    /*vinculando a classe cabecalho
+    a parte cabecalho do grid(apontando)*/
+    grid-area: cabecalho;
+    background-color: #47185a;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    /*eixo principal*/
+    justify-content: center;
+    /*eixo secundário*/
+    align-items: center;
+    padding-bottom: 10px;
+    z-index: 1;
+    box-shadow: 0px 6px 9px 3px rgba(0,0,0,0.75);
+}
+.cabecalho h1{
+    margin: 0;
+    font-weight: 300;
+    font-size: 2.8rem;
+}
+.cabecalho h2{
+    margin: 0;
+    font-weight: 200;
+    font-size: 1.6rem;
+}
+
+.principal{
+    grid-area: principal;
+    height: calc(100vh - 180px);
+    background-color:#f0f0f0;
+    padding: 20px;
+    background-image: url(https://img.freepik.com/fotos-gratis/paisagem-mistica-magenta-com-natureza_23-2150693881.jpg?w=1480&t=st=1698083841~exp=1698084441~hmac=c425c4f7445d99970671eeb7e99b081718cf7662bc6ad6a46bec381cbdd13df9);
+    font-family: 'Times New Roman', Times, serif;
+}
+.conteudo{
+    /*mover elementos em relação a posição
+    original*/
+    position: relative;
+    height: 100%;
+    background-color: #fff;
+    /*scroll para os elementos q excederem*/
+
+    padding: 20px;
+    box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.2);
+    background-image: url(https://img.freepik.com/fotos-gratis/paisagem-mistica-magenta-com-natureza_23-2150693881.jpg?w=1480&t=st=1698083841~exp=1698084441~hmac=c425c4f7445d99970671eeb7e99b081718cf7662bc6ad6a46bec381cbdd13df9);
+}
+
+
+.rodape{
+    grid-area: rodape;
+    background-color: #e33ee3;
+    display: flex;
+    /*eixo principal*/
+    justify-content: flex-end;
+    /*eixo principal*/
+    align-items: center;
+    font-size: 1.2rem;
+    padding-right: 20px;
+    color: #444;
+
+
+}
+.aulas{
+    /* aulas vira container e aula vira flex item */
+    display: flex;
+    /* quebrar linha */
+    flex-wrap: wrap;
+    /* divide os intens proporcionalmente */
+    justify-content: space-around;
+    flex-basis:56%;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+.aula{
+    flex-basis: 56%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background: #ffffff10;
+    border: 2px solid #ffffff30;
+    backdrop-filter: blur(20px);
+}
+
+
+.aula > h3{
+    margin: 0px;
+    color: #fff;
+    font-weight: 300;
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    background: #ffffff10;
+    border: 2px solid #ffffff30;
+    backdrop-filter: blur(10px);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.aula > ul{
+    margin: 0;
+    padding: 10px;
+    list-style: none;
+}
+.aula > ul > li{
+    padding: 7px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.aula > ul > li > a{
+    text-decoration: none;
+    color: #222;
+    /* ocupa toda a linha */
+    display: flex;
+}
+.aula > ul > li:hover{
+    background-color: #eee;
+}
+
+.aula.verde {border: 2px solid #b84de2;}
+.aula.verde > h3 {background-color: #b84de2;}
+
+.aula.vermelho {border: 2px solid #b84de2;}
+.aula.vermelho > h3 {background-color: #b84de2;}
+
+.aula.azul {border: 2px solid #b84de2;}
+.aula.azul > h3 {background-color: #b84de2;}
+
+.aula.roxo {border: 2px solid #9c27b0;}
+.aula.roxo > h3 {background-color: #9c27b0;}
+
+.aula.laranja {border: 2px solid #b84de2;}
+.aula.laranja > h3 {background-color: #ff9800;}
+
+.aula.verde-escuro {border: 2px solid #1b5e20;}
+.aula.verde-escuro > h3 {background-color: #1b5e20;}
+
+.aula.vermelho-escuro {border: 2px solid #b71c1c;}
+.aula.vermelho-escuro > h3 {background-color: #b71c1c;}
+
+.aula.azul-escuro {border: 2px solid #b84de2;}
+.aula.azul-escuro > h3 {background-color: #b84de2;}
+
+.aula.roxo-escuro {border: 2px solid #b84de2;}
+.aula.roxo-escuro > h3 {background-color: #4a148c;}
+
+h1{
+    position: center;
+}
